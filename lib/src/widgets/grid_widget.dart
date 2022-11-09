@@ -37,6 +37,7 @@ class GridWidget extends StatelessWidget {
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w700,
+            letterSpacing: 0.5,
           ),
         ),
       ),
