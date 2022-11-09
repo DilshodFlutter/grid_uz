@@ -30,86 +30,84 @@ class _Grid3State extends State<Grid3> {
         padding: const EdgeInsets.all(12),
         itemCount: (data.length + grid - 1) ~/ grid,
         itemBuilder: (context, index) {
-          return Container(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 120,
-                    margin: const EdgeInsets.only(bottom: 7),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 1,
-                        color: Colors.black,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.green,
+          return Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 120,
+                  margin: const EdgeInsets.only(bottom: 7),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 1,
+                      color: Colors.black,
                     ),
-                    child: Center(
-                      child: Text(
-                        data[index * grid],
-                        style: const TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w700,
-                        ),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.green,
+                  ),
+                  child: Center(
+                    child: Text(
+                      data[index * grid],
+                      style: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(width: 7),
-                Expanded(
-                  child: index * grid + 1 >= data.length
-                      ? Container()
-                      : Container(
-                          height: 120,
-                          margin: const EdgeInsets.only(bottom: 7),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.black,
-                            ),
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green,
+              ),
+              const SizedBox(width: 7),
+              Expanded(
+                child: index * grid + 1 >= data.length
+                    ? Container()
+                    : Container(
+                        height: 120,
+                        margin: const EdgeInsets.only(bottom: 7),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
                           ),
-                          child: Center(
-                            child: Text(
-                              data[index * grid + 1],
-                              style: const TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w700,
-                              ),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green,
+                        ),
+                        child: Center(
+                          child: Text(
+                            data[index * grid + 1],
+                            style: const TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                         ),
-                ),
-                const SizedBox(width: 7),
-                Expanded(
-                  child: index * grid + 2 >= data.length
-                      ? Container()
-                      : Container(
-                          height: 120,
-                          margin: const EdgeInsets.only(bottom: 7),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.black,
-                            ),
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green,
+                      ),
+              ),
+              const SizedBox(width: 7),
+              Expanded(
+                child: index * grid + 2 >= data.length
+                    ? Container()
+                    : Container(
+                        height: 120,
+                        margin: const EdgeInsets.only(bottom: 7),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
                           ),
-                          child: Center(
-                            child: Text(
-                              data[index * grid + 2],
-                              style: const TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w700,
-                              ),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green,
+                        ),
+                        child: Center(
+                          child: Text(
+                            data[index * grid + 2],
+                            style: const TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                         ),
-                ),
-              ],
-            ),
+                      ),
+              ),
+            ],
           );
         },
       ),
