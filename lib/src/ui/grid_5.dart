@@ -35,12 +35,80 @@ class _Grid5State extends State<Grid5> {
                 Expanded(
                   child: Container(
                     height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: Colors.black,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.pink,
+                    ),
                     child: Center(
                       child: Text(
                         data[index * grid],
                       ),
                     ),
                   ),
+                ),
+                Expanded(
+                  child: index * grid + 1 >= data.length
+                      ? Container()
+                      : Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.pink,
+                          ),
+                          child: Center(
+                            child: Text(
+                              data[index * grid + 1],
+                            ),
+                          ),
+                        ),
+                ),
+                Expanded(
+                  child: index * grid + 2 >= data.length
+                      ? Container()
+                      : Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.pink,
+                          ),
+                          child: Center(
+                            child: Text(
+                              data[index * grid + 2],
+                            ),
+                          ),
+                        ),
+                ),
+                Expanded(
+                  child: index * grid + 3 >= data.length
+                      ? Container()
+                      : Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: Colors.black,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.pink,
+                          ),
+                          child: Center(
+                            child: Text(
+                              data[index * grid + 3],
+                            ),
+                          ),
+                        ),
                 ),
               ],
             ),
